@@ -1,0 +1,33 @@
+.defaultLayout--root{
+    min-height: 100vh;
+    display:flex;
+    flex-direction: column;
+}
+.defaultLayout--header{
+    background-color:whitesmoke;
+    padding:1rem 1rem;
+    border-bottom: 1px solid #ccc;
+    display:flex;
+
+}
+.defaultLayout--appName{
+    flex:1;
+}
+.defaultLayout--logo{
+    order:100;
+}
+.defaultLayout--contents{
+    display: flex;
+    flex: 1;
+    
+}
+.defaultLayout--footer{
+    background-color:whitesmoke;
+    ul{
+        display: flex;
+        li{
+            list-style: none;
+            padding:0 1rem;
+        }
+    }
+}

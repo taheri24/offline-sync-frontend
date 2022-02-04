@@ -1,0 +1,23 @@
+.mainPage--root {
+     display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+    min-height: 100%;
+    flex: 1;
+   padding:1rem 2rem;
+   gap:1rem; 
+   grid-auto-flow: row;
+}
+
+.card--root {
+  border: 1px solid #ccc;
+   min-height: 45%;
+   padding:0;
+    
+}
+
+.card--title{
+    margin:0;
+    padding:1rem ;
+
+    background-color: whitesmoke
+} 
