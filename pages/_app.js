@@ -27,7 +27,7 @@ function MyApp({ Component, pageProps }) {
             },
         });
         return freshQueryClient;
-    }, [])
+    }, [onError]);
 
 
     return <QueryClientProvider client={queryClient} > <layout.component>
