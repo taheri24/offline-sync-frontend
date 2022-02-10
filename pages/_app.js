@@ -5,7 +5,7 @@ import { QueryClientProvider } from 'react-query';
 import { SharedQueryClient } from '../shared/query-client';
 import *  as queryFuncs from './_query-funcs';
 import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+
 
 function MyApp({ Component, pageProps }) {
     const layout = React.useMemo(() => ({ component: DefaultLayout || Component?.layout }), [Component])

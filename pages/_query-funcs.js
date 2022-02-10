@@ -14,6 +14,10 @@ export async function remotes(){
     const {data}= await httpClient.get(`/api/remotes`);
     return data;
 }
+export async function fakeError(){
+    const {data}= await httpClient.get(`/api/fake-error`);
+    return data;
+}
 
 export async function folders(){
     const {data}= await httpClient.get(`/api/folders`);
