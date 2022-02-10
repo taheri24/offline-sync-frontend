@@ -21,3 +21,17 @@
 
     background-color: whitesmoke
 } 
+.label:after{
+    content:" :"
+}
+.readOnlyField {
+    .label{
+        padding-left:0.5em;
+        padding-right:0.5em;
+        
+    }
+    display:flex;
+input{
+    border:none;
+}
+}
