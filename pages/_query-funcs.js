@@ -12,7 +12,7 @@ export async function remotes(){
     return data;
 }
 export async function fakeMessage(){
-    const {data}= await httpClient.get(`/api/fake-error`);
+    const {data}= await httpClient.get(`/api/fake-message`);
     return data;
 }
 
