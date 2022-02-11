@@ -23,6 +23,6 @@ export default function DefaultLayout({children}){
     </article>
 }
 function FakeMessageButton({caption,success}){
-    const {mutate}= useMutation('fakeMessage');
-    return <button onClick={()=>mutate({success})}>{caption}</button>;
+    const {mutate:showFakeMessage}= useMutation('fakeMessage');
+    return <button onClick={()=>showFakeMessage({success})}>{caption}</button>;
 }

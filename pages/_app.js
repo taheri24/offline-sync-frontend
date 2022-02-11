@@ -3,8 +3,7 @@ import DefaultLayout from '../default-layout';
 import React from 'react'
 import { QueryClientProvider } from 'react-query';
 import { SharedQueryClient } from '../shared/query-client';
-import *  as queryFuncs from './_query-funcs';
-import *  as mutationFuncs from './_mut-funcs';
+import *  as apiFuncs from './_api-funcs';
 
 import { ToastContainer, toast } from 'react-toastify';
 
@@ -28,8 +27,7 @@ function MyApp({ Component, pageProps }) {
     }  ,[]);  
     const queryClient = React.useMemo(function () {
         const freshQueryClient = new SharedQueryClient({
-            queryFuncs,
-            mutationFuncs,
+            apiFuncs,
             defaultOptions: {
                 queries: { onError },
                 mutations: { onError,onSuccess }

@@ -33,7 +33,7 @@ export class SharedQueryClient extends QueryClient{
                 const [mutationName]=Array.isArray(mutationKey) ?  mutationKey :  [mutationKey];
                 if(!mutationName) throw new Error(`mutationName(mutationKey) is Invalid`);
                 const cli=  SharedQueryClient.instances[instanceId];
-                const fn= cli.mutationFuncs[mutationName];
+                const fn= cli.apiFuncs[mutationName];
                 if(!(fn instanceof Function))  throw new Error(`mutationFn is not a function`);
                 return fn(input);
             }
@@ -44,18 +44,14 @@ export class SharedQueryClient extends QueryClient{
         /**
          * @type {Record<string,QueryFunction>}
          */
-        this.queryFuncs=config.queryFuncs || {};
+        this.apiFuncs=config.apiFuncs  || {};
 
-        /**
-         * @type {Record<string,import("react-query").MutationFunction>}
-         */
-         this.mutationFuncs=config.mutationFuncs || {};
 
     }
     queryFn({queryKey,...rest},...args){
         queryKey = Array.isArray(queryKey) ? queryKey : [queryKey];
         const [queryName] = queryKey;
-        const queryFunc =  this.queryFuncs[queryName];
+        const queryFunc =  this.apiFuncs[queryName];
         if(!(queryFunc instanceof Function) ){
              throw new Error(`Invalid QueryKey`);
         }

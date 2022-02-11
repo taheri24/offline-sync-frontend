@@ -2,7 +2,7 @@ import axios from "axios"
 import { useQuery } from "react-query"
 
 export default function Remotes(){
-    const query=useQuery('remotes');
+    const query=useQuery('loadRemotes');
        
     return <>
     <pre>
