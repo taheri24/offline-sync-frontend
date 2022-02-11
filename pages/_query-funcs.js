@@ -1,9 +1,6 @@
 import   axios   from "axios";
 
-const httpClient= axios.create({
-
-    
-});
+export const httpClient= axios.create({});
 
 export async function  currentDevice(){
     const {data}= await httpClient.get(`/api/current-device`);
@@ -14,7 +11,7 @@ export async function remotes(){
     const {data}= await httpClient.get(`/api/remotes`);
     return data;
 }
-export async function fakeError(){
+export async function fakeMessage(){
     const {data}= await httpClient.get(`/api/fake-error`);
     return data;
 }

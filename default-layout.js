@@ -17,14 +17,12 @@ export default function DefaultLayout({children}){
         <li>Link#2</li>
         <li>Link#3</li>
         <li style={{flex:1}} /> 
-        <li> <FakeErrorButton /> </li>
+        <li> <FakeMessageButton caption="FakeError"/>{' '}<FakeMessageButton success caption="SuccessMessage"/> </li>
         </ul> 
     </footer>
     </article>
 }
-function FakeErrorButton(){
-    const [fakeErrorQueryCounter,setFakeErrorQueryCounter] = React.useState(0);
-    const queryKey=['fakeError',fakeErrorQueryCounter];
-    useQuery(queryKey,{enabled:fakeErrorQueryCounter>0});
-    return <button onClick={()=>setFakeErrorQueryCounter(i=>i+1)}>Fake Error</button>;
+function FakeMessageButton({caption,success}){
+    const {mutate}= useMutation('fakeMessage');
+    return <button onClick={()=>mutate({success})}>{caption}</button>;
 }
