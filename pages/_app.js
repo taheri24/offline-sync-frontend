@@ -3,12 +3,12 @@ import DefaultLayout from '../default-layout';
 import React from 'react'
 import { QueryClientProvider } from 'react-query';
 import { SharedQueryClient } from '../shared/query-client';
-import *  as apiFuncs from './_api-funcs';
+import *  as apiFuncs from '../lib/api-funcs';
 
 import { ToastContainer, toast } from 'react-toastify';
 
 
-function MyApp({ Component, pageProps }) {
+function App({ Component, pageProps }) {
     const layout = React.useMemo(() => ({ component: DefaultLayout || Component?.layout }), [Component])
     const onError = React.useCallback(
         function (/** @type {import('axios').AxiosError}*/ err) {
@@ -44,4 +44,4 @@ function MyApp({ Component, pageProps }) {
     </QueryClientProvider>
 }
 
-export default MyApp
+export default App

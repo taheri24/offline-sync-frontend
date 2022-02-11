@@ -1,6 +1,6 @@
 import axios from "axios"
 import { useQuery } from "react-query"
-import { JsonView } from "./_components";
+import { JsonView } from "../components";
 export default function CurrentDevice() {
     const query = useQuery('loadCurrentDevice');
     const {data} = query;
