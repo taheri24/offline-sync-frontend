@@ -22,7 +22,7 @@ export default function Home() {
                 <Folders />
             </Card>
             <Card title="This Device">
-            <CurrentDevice />
+                <CurrentDevice />
             </Card>
             <Card title="Remotes">
             <Remotes />
