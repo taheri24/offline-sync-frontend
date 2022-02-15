@@ -3,7 +3,7 @@ import DefaultLayout from '../default-layout';
 import React from 'react'
 import { QueryClientProvider } from 'react-query';
 import { SharedQueryClient } from '../shared/query-client';
-import *  as apiFuncs from '../lib/api-funcs';
+import *  as apiFuncs from '../lib/api-funcs/index';
 
 import { ToastContainer, toast } from 'react-toastify';
 
