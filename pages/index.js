@@ -25,7 +25,7 @@ export default function Home() {
                 <CurrentDevice />
             </Card>
             <Card title="Remotes">
-            <Remotes />
+                <Remotes />
                 
             </Card>
         </main>
